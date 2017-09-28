@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75E5BDAE-4CE4-4CE5-BA0F-A749DFA87B4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>szczepix.RGSystem</RootNamespace>
+    <AssemblyName>RG-System</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SE|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\SE\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommandLine">
+      <HintPath>..\..\..\..\SpaceEngineers\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="CudaRand">
+      <HintPath>..\..\..\..\SpaceEngineers\CudaRand.dll</HintPath>
+    </Reference>
+    <Reference Include="GoodAI.Platform.Core">
+      <HintPath>..\..\..\..\SpaceEngineers\GoodAI.Platform.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HavokWrapper">
+      <HintPath>..\..\..\..\SpaceEngineers\HavokWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Common">
+      <HintPath>..\..\..\..\SpaceEngineers\Sandbox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Game">
+      <HintPath>..\..\..\..\SpaceEngineers\Sandbox.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Graphics">
+      <HintPath>..\..\..\..\SpaceEngineers\Sandbox.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector">
+      <HintPath>..\..\..\..\SpaceEngineers\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="SpaceEngineers.Game">
+      <HintPath>..\..\..\..\SpaceEngineers\SpaceEngineers.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="SpaceEngineers.ObjectBuilders">
+      <HintPath>..\..\..\..\SpaceEngineers\SpaceEngineers.ObjectBuilders.dll</HintPath>
+    </Reference>
+    <Reference Include="SpaceEngineers.ObjectBuilders.XmlSerializers">
+      <HintPath>..\..\..\..\SpaceEngineers\SpaceEngineers.ObjectBuilders.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamSDK">
+      <HintPath>..\..\..\..\SpaceEngineers\SteamSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TestingToolPlugin">
+      <HintPath>..\..\..\..\SpaceEngineers\TestingToolPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="TypeMap">
+      <HintPath>..\..\..\..\SpaceEngineers\TypeMap.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Ansel">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.Ansel.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Audio">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Game">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Input">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Library">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Math">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Native">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.Native.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Render">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.Render.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Scripting">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Steam">
+      <HintPath>..\..\..\..\SpaceEngineers\VRage.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="YAXLib">
+      <HintPath>..\..\..\..\SpaceEngineers\YAXLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\StorageCommand.cs" />
+    <Compile Include="Core\ErrorHandler.cs" />
+    <Compile Include="Core\ICommand.cs" />
+    <Compile Include="Core\IModule.cs" />
+    <Compile Include="Core\StorageModule.cs" />
+    <Compile Include="Core\StorageSetting.cs" />
+    <Compile Include="Module\Connector\ModuleConnector.cs" />
+    <Compile Include="Module\Hud\ModuleHud.cs" />
+    <Compile Include="Module\Hud\HudTime.cs" />
+    <Compile Include="RGSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

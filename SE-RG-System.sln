@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SE-RG-System", "SE-RG-System.csproj", "{4D3F31F4-1D10-4302-AA7E-328494068869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "szczepix.RG-System", "Data\Scripts\RG-System\szczepix.RG-System.csproj", "{75E5BDAE-4CE4-4CE5-BA0F-A749DFA87B4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		SE|x64 = SE|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D3F31F4-1D10-4302-AA7E-328494068869}.SE|x64.ActiveCfg = SE|x64
+		{75E5BDAE-4CE4-4CE5-BA0F-A749DFA87B4E}.SE|x64.ActiveCfg = SE|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB66B81C-64D6-4D53-99E4-39F1995D602C}
+	EndGlobalSection
+EndGlobal
