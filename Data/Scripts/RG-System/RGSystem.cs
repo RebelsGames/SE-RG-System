@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using szczepix.RGSystem.Core;
-using Sandbox.ModAPI;
+﻿using szczepix.RGSystem.Core;
 using VRage.Game.Components;
 
 namespace szczepix.RGSystem
@@ -14,7 +8,7 @@ namespace szczepix.RGSystem
     {
         public static RGSystem Instance;
         private bool initialized;
-        public static string Name => "RG System";
+        public static string Name => "RGSystem";
 
         public override void UpdateBeforeSimulation()
         {
@@ -26,17 +20,24 @@ namespace szczepix.RGSystem
 
         private void InitializeMod()
         {
+            Logging.Instance.WriteLine("RGSystem.InitializeMod() - START");
             Instance = this;
             initialized = true;
             StorageModule.Instance.RegisterModuleAll();
+            Logging.Instance.WriteLine("RGSystem.InitializeMod() - END");
         }
 
         protected override void UnloadData()
         {
+            Logging.Instance.WriteLine("RGSystem.UnloadData() - START");
+            //Some things
+            Logging.Instance.WriteLine("RGSystem.UnloadData() - END");
+            Logging.Instance.Close();
         }
 
         public override void LoadData()
         {
+
         }
 
         public override void SaveData()

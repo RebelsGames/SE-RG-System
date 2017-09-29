@@ -14,11 +14,14 @@ namespace szczepix.RGSystem.Core
 
         private void RegisterModule(IModule module, bool enabled = true)
         {
+            Logging.Instance.WriteLine("StorageModule.RegisterModule() - START");
             _moduleList.Add(module, enabled);
+            Logging.Instance.WriteLine("StorageModule.RegisterModule() - END");
         }
 
         public void RegisterModuleAll()
         {
+            Logging.Instance.WriteLine("StorageModule.RegisterModuleAll() - START");
             //TODO: getAllModules and RegisterModuleAll automatically
             if (!_moduleRegistered)
             {
@@ -30,13 +33,13 @@ namespace szczepix.RGSystem.Core
 
                 foreach (var module in _moduleList)
                 {
-                    MyAPIGateway.Utilities.ShowMessage(RGSystem.Name, module.Key.GetName() + " Registered");
                     if (module.Value)
                     {
                         module.Key.Enable();
                     }
                 }
             }
+            Logging.Instance.WriteLine("StorageModule.RegisterModuleAll() - END");
         }
 
         public static StorageModule Instance

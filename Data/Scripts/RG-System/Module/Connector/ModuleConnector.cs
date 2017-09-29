@@ -10,14 +10,16 @@ namespace szczepix.RGSystem.Module.Connector
 
         public void Enable()
         {
+            Logging.Instance.WriteLine("ModuleConnector.Enable() - START");
             Enabled = true;
-            MyAPIGateway.Utilities.ShowMessage(RGSystem.Name, Name + " Enabled");
+            Logging.Instance.WriteLine("ModuleConnector.Enable() - END");
         }
 
         public void Disable()
         {
+            Logging.Instance.WriteLine("ModuleConnector.Disable() - START");
             Enabled = false;
-            MyAPIGateway.Utilities.ShowMessage(RGSystem.Name, Name + " Disabled");
+            Logging.Instance.WriteLine("ModuleConnector.Disable() - END");
         }
         public string GetName()
         {

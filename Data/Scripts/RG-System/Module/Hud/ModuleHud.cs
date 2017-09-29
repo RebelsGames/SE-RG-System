@@ -10,14 +10,16 @@ namespace szczepix.RGSystem.Module.Hud
 
         public void Enable()
         {
+            Logging.Instance.WriteLine("ModuleHud.Enable() - START");
             Enabled = true;
-            MyAPIGateway.Utilities.ShowMessage(RGSystem.Name, Name + " Enabled");
+            Logging.Instance.WriteLine("ModuleHud.Enable() - END");
         }
 
         public void Disable()
         {
+            Logging.Instance.WriteLine("ModuleHud.Disable() - START");
             Enabled = false;
-            MyAPIGateway.Utilities.ShowMessage(RGSystem.Name, Name + " Disabled");
+            Logging.Instance.WriteLine("ModuleHud.Disable() - END");
         }
 
         public string GetName()

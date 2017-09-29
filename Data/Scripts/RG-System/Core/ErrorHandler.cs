@@ -8,6 +8,9 @@ namespace szczepix.RGSystem.Core
     {
         private static ErrorHandler _instance;
         private static bool _debug;
+
+        public static bool Debug => _debug;
+
         public static ErrorHandler Instance
         {
             get
@@ -37,8 +40,13 @@ namespace szczepix.RGSystem.Core
                 message += "Message: \n" + exception.Message + "\n\n";
                 message += "StackTrace: \n" + exception.StackTrace + "\n\n";
                 message += "Source: \n" + exception.Source + "\n\n";
-                MyAPIGateway.Utilities.ShowMissionScreen(RGSystem.Name, "Exception: ", name, message, null, "Zamknij");
+                MyAPIGateway.Utilities.ShowMissionScreen(RGSystem.Name, "Exception: ", name, message, null, "Close");
             }
+        }
+
+        public static void ExceptionLog(Exception exception)
+        {
+            Logging.Instance.WriteLine(exception);
         }
     }
 }
